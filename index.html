@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feiertagszuschlagsrechner</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-wrapper">
+    <div class="calculator-container">
+
+      <h1 id="main-title">Feiertagszuschlagsrechner</h1>
+      <p class="subtitle" id="subtitle">Berechnen Sie Ihren Lohn mit Feiertagszuschlag</p>
+
+      <form id="calculator-form">
+
+        <div class="form-group">
+          <label for="hourly-wage">Brutto-Stundenlohn (€)</label>
+          <input type="number" id="hourly-wage" min="0" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+          <label for="holiday-percentage">Prozentsatz Feiertagszuschlag (%)</label>
+          <input type="number" id="holiday-percentage" min="0" step="0.1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="holiday-hours">Stundenanzahl der Feiertagsschicht</label>
+          <input type="number" id="holiday-hours" min="0" step="0.5" required>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="btn-calculate" id="calculate-btn">Berechnen</button>
+          <button type="button" class="btn-reset" id="reset-btn">Zurücksetzen</button>
+        </div>
+
+      </form>
+
+      <div class="error-message" id="error-message"></div>
+
+      <div class="result-section" id="result-section">
+        <div class="result-item">
+          <div class="result-label">
+            Lohn inklusive Feiertagszuschlag, brutto
+          </div>
+          <div class="result-value" id="final-amount"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
